@@ -11,9 +11,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './filter.component.scss',
 })
 export class FilterComponent implements OnInit {
+  status:string;
   @Output() statusSelected: EventEmitter<Status> = new EventEmitter();
   
   selectStatus(status: Status) {
+    this.status = status;
     this.statusSelected.emit(status);
   }
   
@@ -22,4 +24,8 @@ export class FilterComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  isSelected(status: string): boolean {
+    return this.status === status;
+  }
 }

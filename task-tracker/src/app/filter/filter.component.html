@@ -6,7 +6,8 @@
     [ngClass]="{
       'status-to-do': status === 'To Do',
       'status-in-progress': status === 'In Progress',
-      'status-done': status === 'Done'
+      'status-done': status === 'Done',
+      'selected': isSelected(status)
     }"
   >
     {{ status }}

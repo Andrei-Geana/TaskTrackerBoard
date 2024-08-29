@@ -35,7 +35,9 @@ export class TaskListComponent implements OnInit {
     }
     else{
       this.oldStatus=status;
-      this.filteredTasks = this.tasks.filter((task) => task.status === status);
+      this.taskService.getTasksWithStatus(status).subscribe(tasks => {
+        this.filteredTasks = tasks; 
+      });
     }
   }
 
@@ -43,7 +45,7 @@ export class TaskListComponent implements OnInit {
     this.taskService.getTasks().subscribe(tasks => {
       this.tasks = tasks; 
       this.filteredTasks = this.tasks; 
-      console.log("Initial fetch: list")
+      //console.log("Initial fetch: list")
     });
 
     this.notificationService.notificationSubject.subscribe( hasNotifications => {
@@ -54,10 +56,16 @@ export class TaskListComponent implements OnInit {
             this.filteredTasks = this.tasks;
           }
           else{
-            this.filteredTasks = this.tasks.filter((task) => task.status === this.oldStatus);
+            this.taskService.getTasksWithStatus(this.oldStatus).subscribe(tasks => {
+              console.log(tasks);
+              this.filteredTasks = tasks; 
+            });
           }
         });
-        console.log("Notification fetch: list");
+        //console.log("Notification fetch: list");
+      }
+      else{
+        console.log("No fetch for list!");
       }
     });
   }
@@ -80,7 +88,9 @@ export class TaskListComponent implements OnInit {
           this.filteredTasks = this.tasks;
         }
         else{
-          this.filteredTasks = this.tasks.filter((task) => task.status === this.oldStatus);
+          this.taskService.getTasksWithStatus(this.oldStatus).subscribe(tasks => {
+            this.filteredTasks = tasks; 
+          });
         }
       });
     });

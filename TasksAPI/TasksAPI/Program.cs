@@ -60,9 +60,11 @@ app.UseHttpsRedirection();
 app.MapControllers();
 
 
+#pragma warning disable ASP0014
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapHub<NotificationsHub>("/hub/notifications");
 });
+#pragma warning restore ASP0014
 
 app.Run();

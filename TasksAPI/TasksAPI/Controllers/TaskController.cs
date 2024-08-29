@@ -5,12 +5,18 @@ using TasksAPI.Services;
 
 namespace TasksAPI.Controllers
 {
+    /// <summary>
+    /// Controller for tasks.
+    /// </summary>
     [ApiController]
     [Route("[controller]")]
     public class TaskController : ControllerBase
     {
         ITaskCollectionService _taskCollectionService;
 
+        /// <summary>
+        /// Constructor.
+        /// </summary>
         public TaskController(ITaskCollectionService taskCollectionService)
         {
             _taskCollectionService = taskCollectionService ?? throw new ArgumentNullException(nameof(TaskCollectionService));
@@ -28,6 +34,17 @@ namespace TasksAPI.Controllers
             return Ok(tasks);
         }
 
+        /// <summary>
+        /// Returns the list of tasks with the specified status.
+        /// </summary>
+        /// <param name="status"></param>
+        /// <returns>List of tasks with specified status.</returns>
+        [HttpGet("{status}")]
+        public async Task<IActionResult> GetTasks(string status)
+        {
+            List<TaskModel> tasks = await _taskCollectionService.GetTasksByStatus(status);
+            return Ok(tasks);
+        }
 
         /// <summary>
         /// Creates the task provided in body.

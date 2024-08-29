@@ -23,6 +23,10 @@ export class TaskService {
     return this.httpClient.get<Task[]>(this.baseURL);
   }
 
+  getTasksWithStatus(status: string): Observable<Task[]>  {
+    return this.httpClient.get<Task[]>(`${this.baseURL}/${status}`);
+  }
+
   addTask(newTask: Task) {
     return this.httpClient.post<Task>(this.baseURL, newTask, { headers: this.httpOptions.headers, responseType: 'text' as 'json' });
   }
