@@ -1,0 +1,12 @@
+
+<div class="buttons">
+  <button mat-button (click)="switchMode(true)"><mat-icon>list_on</mat-icon></button>
+  <button mat-button (click)="switchMode(false)"><mat-icon>grid_on</mat-icon></button>
+</div>
+<div *ngIf="isList">
+  <app-task-list></app-task-list>
+</div>
+
+<div *ngIf="!isList">
+  <app-task-grid ></app-task-grid>
+</div>  

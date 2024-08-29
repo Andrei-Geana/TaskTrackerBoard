@@ -1,0 +1,20 @@
+<mat-card class="task-card">
+  <mat-card-actions>
+    <button mat-icon-button color="warn" (click)="deleteTask()">
+      <mat-icon>delete</mat-icon>
+    </button>
+    <button mat-icon-button color="primary" (click)="editTask()">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </mat-card-actions>
+
+  <mat-card-content>
+    <h1>{{ task.title }}</h1>
+    <p>{{ task.description }}</p>
+    <p [ngClass]="{
+      'status-to-do': task.status === 'To Do',
+      'status-in-progress': task.status === 'In Progress',
+      'status-done': task.status === 'Done'
+    }">Assigned To: {{task.assignedTo}}</p>
+  </mat-card-content>
+</mat-card>

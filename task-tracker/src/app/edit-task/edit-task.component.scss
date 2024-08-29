@@ -1,0 +1,22 @@
+.dialog-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  color: #7858e0;
+}
+
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1em;
+}

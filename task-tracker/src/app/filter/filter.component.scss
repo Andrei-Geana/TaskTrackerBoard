@@ -1,0 +1,55 @@
+.buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 8px 20px;
+  margin: 0 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: transparent;
+  color: #333;
+  border: 2px solid #ddd;
+}
+
+.buttons-container:hover {
+  background-color: transparent;
+  color: #000;
+}
+
+.buttons-container button {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  color: #333;
+  border: 1px solid ;
+}
+
+.buttons-container .status-to-do {
+  color: blue;
+}
+
+.buttons-container .status-to-do:hover {
+  color: rgb(100,100,255);
+}
+
+.buttons-container .status-in-progress {
+  color: orange;
+}
+
+.buttons-container .status-in-progress:hover {
+  color: lightcoral;
+}
+
+.buttons-container .status-done {
+  color: brown;
+}
+
+.buttons-container .status-done:hover {
+  color: peru;
+}

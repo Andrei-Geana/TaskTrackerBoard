@@ -1,0 +1,33 @@
+.tasks-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+}
+
+.task-column {
+  flex: 1;
+  margin: 0 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.column-title {
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+.status-to-do {
+  color: blue;
+}
+
+.status-in-progress {
+  color: orange;
+}
+
+.status-done {
+  color: brown;
+}

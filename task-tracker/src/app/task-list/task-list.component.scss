@@ -1,0 +1,65 @@
+.task-item {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin: 16px 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.task-name {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.task-description {
+  font-size: 1em;
+  margin-bottom: 8px;
+}
+
+.task-assignedTo {
+  font-size: 1em;
+  margin-bottom: 8px;
+}
+
+.status-to-do {
+  color: blue;
+  font-weight: bold;
+}
+
+.status-in-progress {
+  color: orange;
+  font-weight: bold;
+}
+
+.status-done {
+  color: brown;
+  font-weight: bold;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.task-actions button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.task-actions button:hover {
+  background-color: #f0f0f0;
+}
+
+.task-actions button:focus {
+  outline: none;
+  box-shadow: none;
+}

@@ -1,0 +1,30 @@
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.buttons button {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons button:hover {
+  background-color: #f0f0f0;
+}
+
+.buttons button:active {
+  background-color: #e0e0e0;
+}
+
+.buttons button:focus {
+  outline: none;
+  box-shadow: none;
+}

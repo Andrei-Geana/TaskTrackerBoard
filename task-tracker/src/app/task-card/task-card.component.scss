@@ -1,0 +1,54 @@
+.task-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin: 16px 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.task-card h1 {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.task-card p {
+  font-size: 1em;
+  margin-bottom: 8px;
+}
+
+.status-to-do {
+  color: blue;
+}
+
+.status-in-progress {
+  color: orange;
+}
+
+.status-done {
+  color: brown;
+}
+
+.mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.mat-card-actions button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mat-card-actions button:hover {
+  background-color: #f0f0f0;
+}
